@@ -1,0 +1,31 @@
+{
+   "name": "UserService",
+   "version": "0.0.1",
+   "description": "Microservice to manage a user database.",
+   "author": "Manu Hortet <manuhortet@gmail.com>",
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/manuhortet/UserService.git"
+   },
+   "devDependencies": {
+      "@types/node": "8.10.44",
+      "ts-node": "3.3.0",
+      "typescript": "2.5.2"
+   },
+   "dependencies": {
+      "bcrypt": "^3.0.4",
+      "graphql": "^14.1.1",
+      "graphql-upload": "^8.0.4",
+      "graphql-yoga": "^1.17.4",
+      "image-downloader": "^3.4.2",
+      "nodemon": "^1.18.10",
+      "reflect-metadata": "^0.1.10",
+      "rimraf": "^2.6.3",
+      "sqlite3": "^4.0.3",
+      "typeorm": "^0.3.0-alpha.22",
+      "typeorm-encrypted": "^0.5.1"
+   },
+   "scripts": {
+      "start": "node -r ts-node/register src/index.ts"
+   }
+}
