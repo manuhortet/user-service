@@ -1,8 +1,3 @@
-// TODO
-// Recheck naming and structure
-// Readme
-
-
 import "reflect-metadata";
 import { GraphQLServer } from "graphql-yoga";
 import { createConnection } from "typeorm";

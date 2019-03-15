@@ -2,26 +2,7 @@
 
 > Using TypeORM and GraphQL.
 
-Simple microservice written in typescript to manage an users database. 
-
-## Getting Started
-#### Local
-From the root of the project, just:
-```
-yarn start
-```
-The GraphQL playground will be accessible on `localhost:4000`
-#### Docker
-Build the service:
-```
-docker build -p <SERVICE-NAME>
-```
-Run the container:
-```
-docker run -t 4000:4000 <SERVICE-NAME>
-```
-The GraphQL playground will be accessible on `localhost:4000`
-
+Simple microservice written in typescript to manage user databases. 
 
 ## Usage
 > CRUD operations from the GraphQL Playground
@@ -88,6 +69,25 @@ mutation {
 ```
 
 
-**Note:** Every interaction can be done through an HTTP endpoint accessing tool as curl
+**Note:** Every interaction can be done through an HTTP endpoint accessing tool as curl too :)
+
+## Running
+### Locally
+From the root of the project, just:
+```
+yarn start
+```
+### Docker
+Build the service:
+```
+docker build -t <SERVICE-NAME>
+```
+Run the container:
+```
+docker run -p 4000:4000 <SERVICE-NAME>
+```
+
+
+**Note:** Running locally or on Docker, the GraphQL playground will be accessible on `localhost:4000`
 
 

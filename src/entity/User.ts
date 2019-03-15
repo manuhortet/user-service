@@ -1,4 +1,4 @@
-import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, BeforeInsert, BeforeRemove} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, BeforeInsert, BeforeUpdate, BeforeRemove} from "typeorm";
 
 const bcrypt = require('bcrypt')
 const saltRounds = 10
@@ -23,19 +23,22 @@ export class User extends BaseEntity {
   @Column({ type: "text", unique: true })
   userName: string;
 
-  @Column() avatar: string;
+  @Column({ type: "text"})
+  avatar: string;
 
   @Column({ type: "text" })
   public password: string;
 
 
   @BeforeInsert()
+  @BeforeUpdate()
   private encryptPassword(): void {
     let salt = bcrypt.genSaltSync(saltRounds)
     this.password = bcrypt.hashSync(this.password, salt)
   }
 
   @BeforeInsert()
+  @BeforeUpdate()
   private saveAvatar(): void {
       let options = {
           url: this.avatar,

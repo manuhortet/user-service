@@ -1,11 +1,11 @@
 {
-   "name": "UserService",
+   "name": "user-service",
    "version": "0.0.1",
-   "description": "Microservice to manage a user database.",
+   "description": "Microservice to manage user databases.",
    "author": "Manu Hortet <manuhortet@gmail.com>",
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/manuhortet/UserService.git"
+      "url": "git+https://github.com/manuhortet/user-service.git"
    },
    "devDependencies": {
       "@types/node": "8.10.44",
